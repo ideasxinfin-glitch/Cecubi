@@ -22,4 +22,3 @@ Las imágenes escolares representan escenas ficticias y se reemplazarán por fot
 En Vercel, importa este repositorio como proyecto estático, selecciona **Other** y utiliza la raíz del repositorio. No se necesita comando de compilación ni variables de entorno. Consulta `LEEME.md` para más detalle.
 
 La demo mantiene `noindex,nofollow`. Valida textos, contacto e imágenes antes de convertirla en sitio institucional definitivo.
-
