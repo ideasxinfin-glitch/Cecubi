@@ -1,35 +1,21 @@
-# Imágenes de muestra · CECUBI
+# Imágenes · CECUBI
 
-Estas imágenes se crearon con la herramienta integrada de generación de imágenes para presentar esta landing. No representan alumnos, docentes, uniformes ni instalaciones reales de CECUBI. Se generaron escenas independientes, sin extraer fotografías de la captura de referencia. El logotipo institucional se conserva del material original y no fue generado.
+Desde el 2026-10-26 la landing usa solo fotografías reales del colegio (carpeta `Fotos`, originales sin tocar). Los recortes optimizados están en `assets/fotos`. Las imágenes de muestra generadas con IA y la versión demo anterior quedaron en `_respaldo-demo` (excluidas del deploy por `.vercelignore`).
 
-Los archivos finales están en `assets`, en formato JPEG con calidad 88, conservando el encuadre y la resolución completos. Los PNG originales de generación se conservan aparte en el equipo. El ZIP incluye los JPEG utilizados por la página.
-
-| Archivo dentro de assets | Sección | Escena de muestra |
+| Archivo en assets/fotos | Origen en Fotos | Sección |
 | --- | --- | --- |
-| hero-demo.jpg | Portada | Tres estudiantes en un patio escolar |
-| maternal-demo.jpg | Maternal | Pequeño jugando con bloques junto a una docente |
-| preescolar-demo.jpg | Preescolar | Niño dibujando con crayones |
-| primaria-demo.jpg | Primaria | Alumna leyendo un libro |
-| secundaria-demo.jpg | Secundaria | Jóvenes colaborando en un proyecto |
-| clase-demo.jpg | Comunidad | Docente y estudiantes en una actividad de clase |
-| aula-demo.jpg | Instalaciones | Aula luminosa con mesas y sillas |
-| recreo-demo.jpg | Instalaciones | Área de juegos al aire libre |
-| biblioteca-demo.jpg | Instalaciones | Biblioteca con mesas y estanterías |
-| cancha-demo.jpg | Instalaciones | Cancha cubierta |
-| salon-infantil-demo.jpg | Instalaciones | Salón para pequeños |
-| deporte-demo.jpg | Vida escolar | Estudiantes jugando básquetbol |
-| arte-demo.jpg | Vida escolar | Taller de pintura |
-| ciencia-demo.jpg | Vida escolar | Experimento sencillo con docente |
-| admisiones-demo.jpg | Admisiones | Estudiante con mochila a la entrada del colegio |
+| hero-resbaladilla.jpg | 11-33-37 (completa) | Portada |
+| alumnos.jpg | 11-33-41 (recorte 4:5) | Nosotros |
+| maternal.jpg | 11-33-21 (recorte 4:5) | Nivel Maternal |
+| preescolar.jpg | 11-33-37 (niño de la izquierda) | Nivel Preescolar |
+| primaria.jpg | 11-33-41 (alumna) | Nivel Primaria |
+| secundaria.jpg | 11-33-41 (alumno) | Nivel Secundaria |
+| area-techada.jpg | 11-32-43 | Instalaciones |
+| juegos-madera.jpg | 11-33-49 | Instalaciones |
+| patio-juegos.jpg | 11-33-46 | Instalaciones |
+| area-mesas.jpg | 11-33-51 (sin los carteles de la pared) | Instalaciones |
+| fachada.jpg | 11-33-44 | Admisiones |
 
-## Sustituir por imágenes reales
+`11-33-18` es un duplicado exacto de `11-32-43`.
 
-Reemplaza el archivo de cada escena por una fotografía autorizada con el mismo nombre. El diseño utiliza imágenes completas, sin cortar zonas de una captura. Si la imagen real tiene otra proporción, adapta los atributos de dimensiones del HTML. Actualiza el texto alternativo correspondiente. Cuando todas las imágenes sean reales y hayan sido aprobadas por el colegio, actualiza las notas de muestra de portada, instalaciones y pie.
-
-## Prompts utilizados
-
-Método: herramienta integrada `image_gen`, sin CLI ni API key proporcionada por el usuario.
-
-Dirección común: fotografía editorial natural y realista para una demo escolar en Mérida; luz cálida, blanco, azul marino y acentos naranja; escenas ficticias; sin logotipos, letras, textos, marcas de agua, interfaces ni collages; composición horizontal 3:2, cabezas completas y márgenes alrededor de las personas.
-
-Se pidió una imagen independiente por cada escena de la tabla. Los detalles específicos fueron: tres niños de primaria juntos en patio; pequeño de dos años con bloques y docente; niño de cinco años dibujando; niña de nueve años leyendo; dos adolescentes colaborando en un proyecto de energía; aula vacía y luminosa; juegos infantiles con sombra; biblioteca escolar; cancha de básquetbol cubierta; salón de preescolar; docente guiando una discusión de clase; niños practicando básquetbol; experimento seguro de mesa; taller de pintura; niño con mochila llegando al colegio. Los uniformes ficticios utilizan polos blancos o naranja con detalles azul marino.
+Para regenerar los recortes: script de Pillow con las cajas de recorte de la tabla, JPEG calidad 82 progresivo.
