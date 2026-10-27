@@ -8,16 +8,16 @@ Cambios técnicos invisibles (2026-10-27). El diseño, los textos y el funcionam
 - Open Graph y Twitter Cards con imagen dedicada `assets/og-cecubi.jpg` (1200×630, no se muestra en la página).
 - JSON-LD `@graph`: School (dirección, teléfono, correo, logo, mapa, niveles como `department`, redes) + WebSite + WebPage.
 - `robots.txt` y `sitemap.xml` (con imágenes).
-- `aria-hidden` en íconos decorativos; caché de assets (1 día) y de CSS/JS (1 hora) en `vercel.json`.
+- `aria-hidden` en íconos decorativos; caché de assets (1 día) y de CSS/JS (1 hora) en `_headers` (Cloudflare).
 
 ## Si cambia el dominio
-Reemplazar `https://cecubi.vercel.app` en `index.html` (canonical, og, JSON-LD), `robots.txt` y `sitemap.xml`. Actualizar `lastmod` del sitemap cuando cambie el contenido.
+Reemplazar `https://cecubi.ideasxinfin.workers.dev` en `index.html` (canonical, og, JSON-LD), `robots.txt` y `sitemap.xml`. Actualizar `lastmod` del sitemap cuando cambie el contenido.
 
 ## Google Search Console
-1. search.google.com/search-console → Agregar propiedad → **Prefijo de URL** `https://cecubi.vercel.app/`.
+1. search.google.com/search-console → Agregar propiedad → **Prefijo de URL** `https://cecubi.ideasxinfin.workers.dev/`.
 2. Verificación por **etiqueta HTML**: pegar la meta `google-site-verification` donde indica el comentario en el `<head>` de `index.html` y publicar.
 3. Sitemaps → enviar `sitemap.xml`.
-4. Inspección de URL → `https://cecubi.vercel.app/` → Solicitar indexación.
+4. Inspección de URL → `https://cecubi.ideasxinfin.workers.dev/` → Solicitar indexación.
 5. Con dominio propio, crear propiedad de **Dominio** (verificación DNS).
 
 ## Google Analytics 4
@@ -25,7 +25,7 @@ Crear propiedad GA4 y pasar el ID `G-XXXXXXX`. Como mide visitantes, conviene ag
 
 ## Google Business Profile (lo que más impacta en búsquedas locales)
 - Reclamar o crear el perfil "CECUBI" con categoría **Escuela** (secundarias: Preescolar, Escuela primaria, Escuela secundaria, Guardería si aplica).
-- Dirección idéntica a la web: Calle 23 #365 x 38 y 40, Mérida, Yuc., C.P. 97138. Teléfono 999 151 1136. Sitio: `https://cecubi.vercel.app/`.
+- Dirección idéntica a la web: Calle 23 #365 x 38 y 40, Mérida, Yuc., C.P. 97138. Teléfono 999 151 1136. Sitio: `https://cecubi.ideasxinfin.workers.dev/`.
 - Horario real, fotos reales (fachada, patios, salones), y pedir reseñas a las familias.
 - Mantener el mismo nombre, dirección y teléfono en Facebook, Instagram y TikTok.
 

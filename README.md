@@ -15,4 +15,11 @@ Abre `index.html` o sirve la carpeta con cualquier servidor estático. No requie
 
 ## Publicación
 
-Proyecto estático en Vercel: framework **Other**, raíz del repositorio, sin comando de compilación ni variables de entorno. `.vercelignore` excluye la documentación del deploy. El sitio permite indexación.
+Cloudflare Workers (archivos estáticos), cuenta ideasxinfin: https://cecubi.ideasxinfin.workers.dev
+
+```bash
+node build.mjs
+npx wrangler deploy
+```
+
+`build.mjs` copia a `dist/` solo los archivos públicos; las cabeceras y la caché están en `_headers`. Si cambia el dominio, actualizar las URLs según `SEO.md`.

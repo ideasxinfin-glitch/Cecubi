@@ -2,3 +2,5 @@
 # Originales y respaldo local (no se publican)
 /Fotos/
 /_respaldo-demo/
+dist/
+.wrangler/
