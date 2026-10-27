@@ -3,7 +3,7 @@
 import { cpSync, rmSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 
-const publicos = ['index.html', 'style.css', 'app.js', 'robots.txt', 'sitemap.xml', '_headers', 'assets'];
+const publicos = ['index.html', 'style.css', 'app.js', 'robots.txt', 'sitemap.xml', 'favicon.ico', '_headers', 'assets'];
 rmSync('dist', { recursive: true, force: true });
 mkdirSync('dist');
 for (const ruta of publicos) cpSync(ruta, `dist/${ruta}`, { recursive: true });
