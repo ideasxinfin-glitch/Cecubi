@@ -8,7 +8,7 @@ Cambios técnicos invisibles (2026-10-27). El diseño, los textos y el funcionam
 - Open Graph y Twitter Cards con imagen dedicada `assets/og-cecubi.jpg` (1200×630, no se muestra en la página).
 - JSON-LD `@graph`: School (dirección, teléfono, correo, logo, mapa, niveles como `department`, redes) + WebSite + WebPage.
 - `robots.txt` y `sitemap.xml` (con imágenes).
-- `aria-hidden` en íconos decorativos; caché de assets (1 día) y de CSS/JS (1 hora) en `_headers` (Cloudflare).
+- `aria-hidden` en íconos decorativos; caché de assets (1 día); CSS/JS siempre revalidados y versionados con hash por `build.mjs` (`_headers`, Cloudflare).
 
 ## Si cambia el dominio
 Reemplazar `https://cecubi.com` en `index.html` (canonical, og, JSON-LD), `robots.txt` y `sitemap.xml`. Actualizar `lastmod` del sitemap cuando cambie el contenido.
