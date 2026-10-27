@@ -161,3 +161,21 @@ footer{background:var(--deep);color:#dbe4ef;padding:34px 0 18px;margin-top:40px}
   .wa-float{right:14px;bottom:14px;width:52px;height:52px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+/* Animaciones: teléfono de contacto y botón flotante de WhatsApp */
+.phone{animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-9px)}}
+.phone-screen a{position:relative;overflow:hidden;transition:background .2s,box-shadow .2s}
+.phone-screen a:hover{box-shadow:0 6px 14px rgba(245,112,28,.22)}
+.phone-screen a:nth-of-type(1){--i:0}.phone-screen a:nth-of-type(2){--i:1}.phone-screen a:nth-of-type(3){--i:2}.phone-screen a:nth-of-type(4){--i:3}.phone-screen a:nth-of-type(5){--i:4}
+.phone-screen a::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(245,112,28,.3),transparent);transform:skewX(-20deg);pointer-events:none;animation:shine 4.2s ease-in-out infinite;animation-delay:calc(var(--i,0)*.45s + 1.4s)}
+@keyframes shine{0%{left:-60%}35%,100%{left:130%}}
+.phone-screen .chev{animation:nudge 1.6s ease-in-out infinite;animation-delay:calc(var(--i,0)*.2s)}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+.phone.anim .phone-screen a{opacity:0;transform:translateX(28px)}
+.phone.in .phone-screen a{animation:slide-in .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*.13s)}
+@keyframes slide-in{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;z-index:-1;animation:ring 2.2s ease-out infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.55}80%,100%{transform:scale(1.75);opacity:0}}
+.wa-float .ico{animation:wiggle 5s ease-in-out infinite}
+@keyframes wiggle{0%,84%,100%{transform:rotate(0)}87%{transform:rotate(-15deg)}90%{transform:rotate(13deg)}93%{transform:rotate(-9deg)}96%{transform:rotate(4deg)}}
+@media(prefers-reduced-motion:reduce){.phone.anim .phone-screen a{opacity:1;transform:none}}
