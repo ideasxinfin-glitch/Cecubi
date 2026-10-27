@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cecubi.ideasxinfin.workers.dev/sitemap.xml
+Sitemap: https://cecubi.com/sitemap.xml

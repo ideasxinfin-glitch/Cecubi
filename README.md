@@ -15,11 +15,11 @@ Abre `index.html` o sirve la carpeta con cualquier servidor estático. No requie
 
 ## Publicación
 
-Cloudflare Workers (archivos estáticos), cuenta ideasxinfin: https://cecubi.ideasxinfin.workers.dev
+Cloudflare Workers (archivos estáticos), cuenta ideasxinfin: https://cecubi.com
 
 ```bash
 node build.mjs
 npx wrangler deploy
 ```
 
-`build.mjs` copia a `dist/` solo los archivos públicos; las cabeceras y la caché están en `_headers`. Si cambia el dominio, actualizar las URLs según `SEO.md`.
+`build.mjs` copia a `dist/` solo los archivos públicos; las cabeceras y la caché están en `_headers`. `worker.js` redirige `www.cecubi.com` y `http://` a `https://cecubi.com`; la copia técnica sigue en https://cecubi.ideasxinfin.workers.dev. Si cambia el dominio, actualizar las URLs según `SEO.md`.

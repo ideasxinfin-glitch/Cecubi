@@ -3,9 +3,17 @@
   "name": "cecubi",
   "compatibility_date": "2026-10-23",
   "workers_dev": true,
+  // worker.js solo redirige www a cecubi.com; todo lo demás son archivos estáticos.
+  "main": "worker.js",
   // Sitio estático: `node build.mjs` genera dist/ y `npx wrangler deploy` lo publica.
   "assets": {
     "directory": "./dist",
-    "html_handling": "auto-trailing-slash"
-  }
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": true
+  },
+  "routes": [
+    { "pattern": "cecubi.com", "custom_domain": true },
+    { "pattern": "www.cecubi.com", "custom_domain": true }
+  ]
 }
