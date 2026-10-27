@@ -179,6 +179,3 @@ footer{background:var(--deep);color:#dbe4ef;padding:34px 0 18px;margin-top:40px}
 .wa-float .ico{animation:wiggle 5s ease-in-out infinite}
 @keyframes wiggle{0%,84%,100%{transform:rotate(0)}87%{transform:rotate(-15deg)}90%{transform:rotate(13deg)}93%{transform:rotate(-9deg)}96%{transform:rotate(4deg)}}
 @media(prefers-reduced-motion:reduce){.phone.anim .phone-screen a{opacity:1;transform:none}}
-/* Logo animado del encabezado (video ligero con bordes difuminados) */
-.brand .logo-video{display:block;height:72px;width:auto;aspect-ratio:288/160;background:#fff;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent),linear-gradient(180deg,transparent,#000 9%,#000 91%,transparent);mask-composite:intersect}
-@media(max-width:640px){.brand .logo-video{height:60px}}
