@@ -17,3 +17,6 @@ if(phone && 'IntersectionObserver' in window && !matchMedia('(prefers-reduced-mo
   phone.classList.add('anim');
   new IntersectionObserver((entries,obs)=>{entries.forEach(entry=>{if(entry.isIntersecting){phone.classList.add('in');obs.disconnect();}});},{threshold:.35}).observe(phone);
 }
+// Con "reducir movimiento" el logo del encabezado queda quieto (se ve el cuadro inicial)
+const logoVideo=document.querySelector('.logo-video');
+if(logoVideo && matchMedia('(prefers-reduced-motion:reduce)').matches){logoVideo.removeAttribute('autoplay');logoVideo.pause();}
