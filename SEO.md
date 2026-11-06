@@ -16,6 +16,7 @@ Cambios técnicos invisibles (2026-10-27). El diseño, los textos y el funcionam
 - Sitemap de imágenes solo con instalaciones: las fotos de alumnos no se promueven ahí (menores de edad).
 - Fotos pesadas reducidas de 2,236 KB a 1,621 KB, sin cambiar proporción ni nombre y sin metadatos.
 - Espacio antes de cada `<br>` para que los buscadores no lean palabras pegadas.
+- Cambio visible aprobado por el usuario: "Colegio en Mérida, Yucatán" arriba del título principal.
 
 ## Si cambia el dominio
 Reemplazar `https://cecubi.com` en `index.html` (canonical, og, JSON-LD), `robots.txt` y `sitemap.xml`. Actualizar `lastmod` del sitemap cuando cambie el contenido.
@@ -37,7 +38,6 @@ Crear propiedad GA4 y pasar el ID `G-XXXXXXX`. Como mide visitantes, conviene ag
 - Mantener el mismo nombre, dirección y teléfono en Facebook, Instagram y TikTok.
 
 ## Recomendaciones opcionales (cambian contenido visible; requieren aprobación)
-- Mencionar "Mérida, Yucatán" en un texto visible del hero o de Nosotros.
 - Agregar horarios de atención y una sección de preguntas frecuentes (permite FAQPage en datos estructurados).
 - Un mapa de Google embebido en Contacto.
 - Textos alternativos con nombre del nivel y la ciudad en algunas fotos (son invisibles, pero describen la imagen y conviene que el colegio los revise).
