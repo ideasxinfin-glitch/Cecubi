@@ -10,13 +10,20 @@ Cambios técnicos invisibles (2026-10-27). El diseño, los textos y el funcionam
 - `robots.txt` y `sitemap.xml` (con imágenes).
 - `aria-hidden` en íconos decorativos; caché de assets (1 día); CSS/JS siempre revalidados y versionados con hash por `build.mjs` (`_headers`, Cloudflare).
 
+## Auditoría 2026-11-06 (también invisible)
+- `worker.js`: `*.workers.dev` e `/index.html` redirigen con 301 a `https://cecubi.com/`, para que no haya copias del sitio.
+- Título y descripción cubren "colegio" y "escuela"; JSON-LD con teléfono E.164 y `alternateName` "Colegio CECUBI".
+- Sitemap de imágenes solo con instalaciones: las fotos de alumnos no se promueven ahí (menores de edad).
+- Fotos pesadas reducidas de 2,236 KB a 1,621 KB, sin cambiar proporción ni nombre y sin metadatos.
+- Espacio antes de cada `<br>` para que los buscadores no lean palabras pegadas.
+
 ## Si cambia el dominio
 Reemplazar `https://cecubi.com` en `index.html` (canonical, og, JSON-LD), `robots.txt` y `sitemap.xml`. Actualizar `lastmod` del sitemap cuando cambie el contenido.
 
 ## Google Search Console
 1. search.google.com/search-console → Agregar propiedad → **Dominio** `cecubi.com` (cubre www, http y https).
 2. Google da un registro TXT: agregarlo en Cloudflare → cecubi.com → DNS → Add record (Tipo TXT, Nombre `@`). Cloudflare puede hacerlo solo si Search Console ofrece "Verificar con Cloudflare".
-   Alternativa: propiedad **Prefijo de URL** `https://cecubi.com/` con la meta `google-site-verification` en el `<head>` (hay un comentario marcando el lugar).
+   Alternativa: propiedad **Prefijo de URL** `https://cecubi.com/` con la meta `google-site-verification` en el `<head>`.
 3. Sitemaps → enviar `https://cecubi.com/sitemap.xml`.
 4. Inspección de URL → `https://cecubi.com/` → Solicitar indexación.
 
