@@ -23,3 +23,7 @@ npx wrangler deploy
 ```
 
 `build.mjs` copia a `dist/` solo los archivos públicos; las cabeceras y la caché están en `_headers`. `worker.js` redirige `www.cecubi.com` y `http://` a `https://cecubi.com`; la copia técnica sigue en https://cecubi.ideasxinfin.workers.dev. Si cambia el dominio, actualizar las URLs según `SEO.md`.
+
+## Despliegue automático
+
+La rama `main` está vinculada a Cloudflare Workers Builds. Comando de compilación: `node build.mjs`; comando de despliegue: `npx wrangler deploy`. La publicación depende del resultado del build en Cloudflare.
